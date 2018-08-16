@@ -1,0 +1,9 @@
+E:\MyWorkSpace\CS\RegexTool\RegexTool\bin\Debug\RegexTool.exe.config
+E:\MyWorkSpace\CS\RegexTool\RegexTool\bin\Debug\RegexTool.exe
+E:\MyWorkSpace\CS\RegexTool\RegexTool\bin\Debug\RegexTool.pdb
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.csprojResolveAssemblyReference.cache
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.Form1.resources
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.Properties.Resources.resources
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.csproj.GenerateResource.Cache
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.exe
+E:\MyWorkSpace\CS\RegexTool\RegexTool\obj\Debug\RegexTool.pdb
