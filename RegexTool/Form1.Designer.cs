@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtRegex = new System.Windows.Forms.TextBox();
-            this.txtContent = new System.Windows.Forms.TextBox();
-            this.btnTest = new System.Windows.Forms.Button();
-            this.lstResult = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lstResult = new System.Windows.Forms.ListBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.txtContent = new System.Windows.Forms.TextBox();
+            this.txtRegex = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,8 @@
             // 
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lstResult);
-            this.groupBox1.Controls.Add(this.btnTest);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.txtContent);
             this.groupBox1.Controls.Add(this.txtRegex);
             this.groupBox1.Controls.Add(this.label2);
@@ -54,48 +56,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "正则表达式：";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "待匹配文本：";
-            // 
-            // txtRegex
-            // 
-            this.txtRegex.Location = new System.Drawing.Point(91, 21);
-            this.txtRegex.Name = "txtRegex";
-            this.txtRegex.Size = new System.Drawing.Size(551, 21);
-            this.txtRegex.TabIndex = 1;
-            // 
-            // txtContent
-            // 
-            this.txtContent.Location = new System.Drawing.Point(91, 49);
-            this.txtContent.Multiline = true;
-            this.txtContent.Name = "txtContent";
-            this.txtContent.Size = new System.Drawing.Size(551, 81);
-            this.txtContent.TabIndex = 2;
-            // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(311, 145);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 30);
-            this.btnTest.TabIndex = 3;
-            this.btnTest.Text = "测试匹配";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 248);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "匹配结果：";
             // 
             // lstResult
             // 
@@ -106,14 +74,58 @@
             this.lstResult.Size = new System.Drawing.Size(551, 136);
             this.lstResult.TabIndex = 4;
             // 
-            // label3
+            // btnClear
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "匹配结果：";
+            this.btnClear.Location = new System.Drawing.Point(381, 147);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 30);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "清空";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtContent
+            // 
+            this.txtContent.Location = new System.Drawing.Point(91, 49);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(551, 81);
+            this.txtContent.TabIndex = 2;
+            // 
+            // txtRegex
+            // 
+            this.txtRegex.Location = new System.Drawing.Point(91, 21);
+            this.txtRegex.Name = "txtRegex";
+            this.txtRegex.Size = new System.Drawing.Size(551, 21);
+            this.txtRegex.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 12);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "待匹配文本：";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "正则表达式：";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(214, 147);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 30);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "测试匹配";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // Form1
             // 
@@ -133,13 +145,14 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtContent;
         private System.Windows.Forms.TextBox txtRegex;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox lstResult;
+        private System.Windows.Forms.Button button1;
     }
 }
 

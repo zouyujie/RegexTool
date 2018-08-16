@@ -40,7 +40,7 @@ namespace RegexTool
                     lstResult.Items.Add("序号     匹配值");
                     for (var i = 0; i < g.Count; i++)
                     {
-                        lstResult.Items.Add(i + ":     " + g[i].Value);// Environment.NewLine;
+                        lstResult.Items.Add(i + "     " + g[i].Value);// Environment.NewLine;
                     }
                 }
             }
@@ -55,6 +55,13 @@ namespace RegexTool
         {
             txtContent.Text = "建筑：长沙市口腔医院，在15日产生以下报警：2#空调主机未关，请及时处理。";
             txtRegex.Text = "(.*建筑：)(.*)，在([0-9]{1,})日产生以下报警：(.*)，请及时处理。";
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtContent.Text = "";
+            txtRegex.Text = "";
+            lstResult.Items.Clear();
         }
     }
 }
